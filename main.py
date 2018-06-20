@@ -14,8 +14,6 @@ try:
 except Exception:
     pass
 os.mkdir('ScreenShot')
-if not os.path.exists('SingleChar'):
-    os.mkdir('SingleChar')
 if config['debug']:
     print("开启了调试模式，请手动答题")
     if not os.path.exists('ScreenShotForTrain'):
