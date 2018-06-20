@@ -68,13 +68,13 @@ def contours2tuple(contours):
         yield (x, y, w, h)
 
 def cutImg(img):
-    # 将绘制图片中的轮廓,并且找出最小矩形x,y,width,heigth
+    """将绘制图片中的轮廓,并且找出最小矩形x,y,width,heigth"""
     _, contours, hier = cv2.findContours(img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     rects = sorted(contours2tuple(contours), key=lambda x: x[0])  # 按照box的x值sort
     return rects
 
 def rects2Image(rects, img, filename):
-    # 将最小矩形x,y,width,heigth转化成图片
+    """将最小矩形x,y,width,heigth转化成图片"""
     imglist = []
     for count, rect in enumerate(rects):
         imgROI = img[rect[1]:(rect[1] + rect[3]), rect[0]:(rect[0] + rect[2])]
@@ -104,8 +104,8 @@ def all(img, filename):
 
     return img1s, img2s, img3s
 
-# 获取用于训练的单个字符(将ScreenShotForTrain字符分隔,存入SingleCharForTrain)
 def get_char_for_train():
+    """获取用于训练的单个字符(将ScreenShotForTrain字符分隔,存入SingleCharForTrain)"""
     if not os.path.exists('SingleCharForTrain'):
         os.mkdir('SingleCharForTrain')
 
@@ -153,7 +153,7 @@ def get_result(lr, img, filename):
     res = ''.join(res)
     return res
 
-
+# 测试
 if __name__ == '__main__':
     filename = 'false2.png'
     srcImg = cv2.imread('ScreenShotForTrain/'+filename, 0)

@@ -6,7 +6,6 @@ import win32gui, win32ui, win32con
 import cv2
 from pymouse import PyMouse
 import time
-from PIL import ImageGrab
 import numpy as np
 from config import config
 import os
