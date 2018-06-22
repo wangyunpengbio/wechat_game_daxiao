@@ -4,7 +4,7 @@
 游戏的目标比拼计算能力，找出谁大谁小，一共有40题，全部答对即挑战成功。
 一开始答题时间充足，数字也比较简单，后面就需要特别快的计算速度。
 
-![游戏界面](https://i.imgur.com/YISNUNC.png)![成功通关界面](https://i.imgur.com/sffTuQD.png)
+![游戏界面](https://i.imgur.com/YISNUNC.png)![成功通关界面](https://i.imgur.com/sffTuQD.png)![游戏过程](https://i.imgur.com/bwz0RTM.gif)
 
 ## 项目地址 ##
 本项目地址：https://github.com/wangyunpengbio/wechat_game_daxiao
